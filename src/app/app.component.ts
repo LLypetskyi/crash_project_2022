@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   products$!: Observable<IProduct[]>
 
   loading = false;
+  term ='';
 
   constructor(private productsService: ProductsService) {
   }

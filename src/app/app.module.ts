@@ -1,22 +1,33 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './conponents/product/product.component';
 import { GlobalErrorComponent } from './conponents/global-error/global-error.component';
+import { FilterProductsPipe } from './pipes/filter-products.pipe';
+import { ModelComponent } from './conponents/model/model.component';
+import { CreateProductComponent } from './conponents/create-product/create-product.component';
+import { FocusDirective } from './directives/focus.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    GlobalErrorComponent
+    GlobalErrorComponent,
+    FilterProductsPipe,
+    ModelComponent,
+    CreateProductComponent,
+    FocusDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
