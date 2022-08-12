@@ -7,10 +7,10 @@ export class FocusDirective implements OnInit, AfterViewInit {
 
   constructor(private el: ElementRef) { }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.el.nativeElement.focus();
   }
   ngAfterViewInit(): void {
-    this.el.nativeElement.focus();
+    // this.el.nativeElement.focus();
   }
 
 
